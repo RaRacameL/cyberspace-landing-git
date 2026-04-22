@@ -41,9 +41,6 @@
         <!-- 1 ─ HERO ─────────────────────────────────────────── -->
         <section class="hero">
             <div class="hero-inner">
-                <p class="hero-label">Pacific-Based Legal and Regulatory Advisory</p>
-                <h2 class="hero-headline">Navigating<br>The Cyberspace</h2>
-                <p class="hero-sub">Law &middot; Policy &middot; Enforcement</p>
                 <p class="hero-copy">We advise governments and institutions on converting digital policy into enforceable law and functioning regulatory frameworks.</p>
                 <a href="#contact" class="btn-primary">Request Consultation</a>
             </div>
@@ -189,9 +186,8 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <h4>Email</h4>
-                        <p><a href="mailto:info@lagatoicyberspace.com">info@lagatoicyberspace.com</a></p>
-                        <p><a href="mailto:oala@lagatoicyberspace.com">oala@lagatoicyberspace.com</a></p>
-                    </div>
+                            <p><button class="email-link" id="open-email-modal" type="button">info@lagatoicyberspace.com</button></p>
+                            <p><button class="email-link" id="open-email-modal-2" type="button">oala@lagatoicyberspace.com</button></p>                    </div>
                     <div class="contact-item">
                         <h4>Phone</h4>
                         <p><a href="tel:+67575655034">+675 7565 5034</a></p>
@@ -245,6 +241,33 @@
         <p>&copy; 2026 Lagatoi Cyberspace Consultancy. All rights reserved.</p>
     </div>
 </footer>
+
+
+<div class="modal-overlay" id="email-modal">
+    <div class="modal-box">
+        <button class="modal-close" id="close-email-modal" type="button" aria-label="Close contact form">&times;</button>
+
+        <h2>Send a Message</h2>
+
+        <form id="contact-form">
+            <label for="sender-name">Your Name</label>
+            <input type="text" id="sender-name" name="sender_name" required>
+
+            <label for="sender-email">Your Email</label>
+            <input type="email" id="sender-email" name="sender_email" required>
+
+            <label for="email-subject">Subject</label>
+            <input type="text" id="email-subject" name="subject" required>
+
+            <label for="email-message">Message</label>
+            <textarea id="email-message" name="message" rows="6" required></textarea>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+
+            <p id="form-status" aria-live="polite"></p>
+        </form>
+    </div>
+</div>
 
 <script>
 // ── Interactive Cards ──────────────────────────────────────────
@@ -329,6 +352,30 @@ panelToggle.addEventListener('click', () => {
         founderPanel.classList.remove('collapsed');
         panelToggle.setAttribute('aria-expanded', 'true');
         toggleIcon.textContent = '›';
+    }
+});
+
+// ── Email Modal Toggle ────────────────────────────────────────
+const emailModal = document.getElementById('email-modal');
+const openEmailModal = document.getElementById('open-email-modal');
+const openEmailModal2 = document.getElementById('open-email-modal-2');
+const closeEmailModal = document.getElementById('close-email-modal');
+
+function showEmailModal() {
+    emailModal.classList.add('show');
+}
+
+function hideEmailModal() {
+    emailModal.classList.remove('show');
+}
+
+openEmailModal.addEventListener('click', showEmailModal);
+openEmailModal2.addEventListener('click', showEmailModal);
+closeEmailModal.addEventListener('click', hideEmailModal);
+
+emailModal.addEventListener('click', (e) => {
+    if (e.target === emailModal) {
+        hideEmailModal();
     }
 });
 </script>
