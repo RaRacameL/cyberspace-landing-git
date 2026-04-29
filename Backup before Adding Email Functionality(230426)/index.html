@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lagatoi Cyberspace Consultancy — Law. Policy. Enforcement.</title>
-    
-    <link rel="icon" type="image/png" href="whitefaviconlogo.png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
@@ -30,7 +27,7 @@
     <ul>
         <li><a href="#problem">The Problem</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#insights">Insights</a></li>
+        <li><a href="#approach">Approach</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#company">About</a></li>
     </ul>
@@ -172,39 +169,6 @@
             </div>
         </section>
 
-        <!-- INSIGHTS ──────────────────────────────────────────── -->
-<section id="insights">
-    <div class="section-inner">
-        <h2>Policy &amp; Implementation Notes</h2>
-        <p class="section-lead">Perspectives on cyberspace law, enforcement readiness, and digital governance in practice.</p>
-
-        <div class="insights-grid">
-
-            <a href="insights/first-article.html" class="insight-card">
-                <span class="insight-tag">Cybercrime Law</span>
-                <h3>Why Cyber Policy Fails at Implementation</h3>
-                <p>Most jurisdictions have adopted some form of cybercrime legislation. The critical gap is not the law — it is the operational framework that allows it to be enforced in practice.</p>
-                <span class="insight-read">Read →</span>
-            </a>
-
-            <div class="insight-card">
-                <span class="insight-tag">Digital Governance</span>
-                <h3>Digital Governance in the Pacific</h3>
-                <p>Pacific island nations face distinct challenges in building digital legal infrastructure — from institutional capacity to spectrum regulation and enforcement design.</p>
-                <span class="insight-status">Forthcoming</span>
-            </div>
-
-            <div class="insight-card">
-                <span class="insight-tag">AI Policy</span>
-                <h3>AI Policy and Legal Accountability</h3>
-                <p>Artificial intelligence policy is developing faster than the legal frameworks meant to govern it. Accountability mechanisms must be embedded in legislation from the outset.</p>
-                <span class="insight-status">Forthcoming</span>
-            </div>
-
-        </div>
-    </div>
-</section>
-
         <!-- 6 ─ CLOSING CTA ──────────────────────────────────── -->
         <section class="cta-closing">
             <div class="cta-inner">
@@ -219,24 +183,19 @@
             <div class="section-inner">
                 <h2>Contact Us</h2>
                 <p class="section-lead">Get in touch with our team for consultation.</p>
-        
                 <div class="contact-info">
                     <div class="contact-item">
                         <h4>Email</h4>
-                        <p><a href="mailto:info@lagatoicyberspace.com">info@lagatoicyberspace.com</a></p>
-                        <p><a href="mailto:oala@lagatoicyberspace.com">oala@lagatoicyberspace.com</a></p>
+                            <p><button class="email-link" id="open-email-modal" type="button">info@lagatoicyberspace.com</button></p>
+                            <p><button class="email-link" id="open-email-modal-2" type="button">oala@lagatoicyberspace.com</button></p>                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+67575655034">+675 7565 5034</a></p>
                     </div>
-        
                     <div class="contact-item">
                         <h4>Address</h4>
-                        <p><!--Text goes here--><br><!--Text goes here--></p>
+                        <p>123 Digital Policy Street<br>Tech City, TC 12345</p>
                     </div>
-                </div>
-        
-                <div class="contact-form-cta">
-                    <button class="btn-primary" id="open-email-modal" type="button">
-                        Click here to send us an Email!
-                    </button>
                 </div>
             </div>
         </section>
@@ -260,16 +219,16 @@
             <button class="panel-toggle" id="panel-toggle" aria-expanded="true" aria-label="Toggle founder panel">
                 <span id="toggle-icon">›</span>
             </button>
-            <span class="panel-label">Our Principal Consultant</span>
+            <span class="panel-label">Our Principal</span>
         </div>
 
         <!-- Collapsible content -->
         <div class="panel-content" id="panel-content">
-            <h2>The Founder</h2>
+            <h2>Our Principal</h2>
             <img src="images/founder.jpeg" alt="Mr Oala Moi, Principal of Lagatoi Cyberspace Consultancy" class="founder-img">
             <h3>Mr Oala Moi</h3>
-            <p><!--Text goes here --></p>
-            <p><!--Text goes here --></p>
+            <p>A Papua New Guinean lawyer with over a decade of experience in telecommunications regulation, cyber law, legislative drafting, and public policy.</p>
+            <p>Led by a practitioner who has worked inside the regulatory systems he now advises on.</p>
         </div>
 
     </aside>
@@ -290,61 +249,23 @@
 
         <h2>Send a Message</h2>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form">
+            <label for="sender-name">Your Name</label>
+            <input type="text" id="sender-name" name="sender_name" required>
 
-    <div class="hp-field" aria-hidden="true">
-        <label for="hp-website">Leave this field blank</label>
-        <input
-            type="text"
-            name="website"
-            id="hp-website"
-            tabindex="-1"
-            autocomplete="off"
-        >
-    </div>
+            <label for="sender-email">Your Email</label>
+            <input type="email" id="sender-email" name="sender_email" required>
 
-    <div class="form-group">
-        <label for="visitor-name">Full Name</label>
-        <input
-            type="text"
-            id="visitor-name"
-            name="visitor_name"
-            placeholder="Your full name"
-            maxlength="100"
-            autocomplete="name"
-        >
-    </div>
+            <label for="email-subject">Subject</label>
+            <input type="text" id="email-subject" name="subject" required>
 
-    <div class="form-group">
-        <label for="visitor-email">Email Address</label>
-        <input
-            type="email"
-            id="visitor-email"
-            name="visitor_email"
-            placeholder="your@email.com"
-            maxlength="254"
-            autocomplete="email"
-        >
-    </div>
+            <label for="email-message">Message</label>
+            <textarea id="email-message" name="message" rows="6" required></textarea>
 
-    <div class="form-group">
-        <label for="visitor-message">Message</label>
-        <textarea
-            id="visitor-message"
-            name="visitor_message"
-            rows="6"
-            placeholder="Describe your enquiry or area of interest..."
-            maxlength="5000"
-        ></textarea>
-    </div>
+            <button type="submit" class="btn-primary">Send Message</button>
 
-    <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
-
-    <button type="submit" id="form-submit" class="btn-primary">
-        <span id="btn-text">Send Enquiry</span>
-    </button>
-
-</form>
+            <p id="form-status" aria-live="polite"></p>
+        </form>
     </div>
 </div>
 
@@ -437,6 +358,7 @@ panelToggle.addEventListener('click', () => {
 // ── Email Modal Toggle ────────────────────────────────────────
 const emailModal = document.getElementById('email-modal');
 const openEmailModal = document.getElementById('open-email-modal');
+const openEmailModal2 = document.getElementById('open-email-modal-2');
 const closeEmailModal = document.getElementById('close-email-modal');
 
 function showEmailModal() {
@@ -447,88 +369,15 @@ function hideEmailModal() {
     emailModal.classList.remove('show');
 }
 
-if (openEmailModal) openEmailModal.addEventListener('click', showEmailModal);
-if (closeEmailModal) closeEmailModal.addEventListener('click', hideEmailModal);
+openEmailModal.addEventListener('click', showEmailModal);
+openEmailModal2.addEventListener('click', showEmailModal);
+closeEmailModal.addEventListener('click', hideEmailModal);
 
-if (emailModal) {
-    emailModal.addEventListener('click', (e) => {
-        if (e.target === emailModal) {
-            hideEmailModal();
-        }
-    });
-}
-
-// ── Contact Form Submission ───────────────────────────────────
-(function () {
-    const form      = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('form-submit');
-    const btnText   = document.getElementById('btn-text');
-    const statusBox = document.getElementById('form-status');
-
-    if (!form || !submitBtn || !btnText || !statusBox) return;
-
-    form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        statusBox.className = 'form-status';
-        statusBox.textContent = '';
-
-        const nameVal    = form.visitor_name.value.trim();
-        const emailVal   = form.visitor_email.value.trim();
-        const messageVal = form.visitor_message.value.trim();
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!nameVal) {
-            showStatus('error', 'Please enter your full name.');
-            return;
-        }
-
-        if (!emailVal || !emailRegex.test(emailVal)) {
-            showStatus('error', 'Please enter a valid email address.');
-            return;
-        }
-
-        if (!messageVal) {
-            showStatus('error', 'Please enter a message before sending.');
-            return;
-        }
-
-        submitBtn.disabled = true;
-        btnText.textContent = 'Sending…';
-
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch('contact.php', {
-                method: 'POST',
-                body: formData
-            });
-
-            const data = await response.json();
-
-            if (data.status === 'success') {
-                showStatus('success', 'Thank you. Your message has been received. We will be in touch shortly.');
-                form.reset();
-            } else {
-                showStatus('error', data.message || 'Something went wrong. Please try again.');
-            }
-
-        } catch (err) {
-            console.error('Contact form error:', err);
-            showStatus('error', 'A connection error occurred. Please check your internet connection and try again.');
-        } finally {
-            submitBtn.disabled = false;
-            btnText.textContent = 'Send Enquiry';
-        }
-    });
-
-    function showStatus(type, message) {
-        statusBox.className = 'form-status ' + type;
-        statusBox.textContent = message;
+emailModal.addEventListener('click', (e) => {
+    if (e.target === emailModal) {
+        hideEmailModal();
     }
-})();
-
+});
 </script>
 
 </body>
